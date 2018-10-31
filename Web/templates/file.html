@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block header %}FILE-CONTEXT{% endblock %}
+
+{% block content %}
+  <p>{{ file['title'] }}</p>
+  <p>{{ file['create_time'] }}</p>
+  <p>{{ file['content'] }}</p>
+{% endblock %}

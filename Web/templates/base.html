@@ -1,0 +1,23 @@
+<html lang='zh-CN'>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block header %}{% endblock %}</title>
+    <link href="{{ url_for('static', filename="bootstrap-3.3.7-dist/css/bootstrap.min.css") }}" rel="stylesheet">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">News</a>
+        </div>
+      </nav>
+      {% block content %}{% endblock %}
+      <script src="{{ url_for('static', filename="bootstrap-3.3.7-dist/js/bootstrap.min.js") }}"></script>
+    </div>
+  </body>
+</html>

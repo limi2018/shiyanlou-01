@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block header %}
+  Index
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1>Index</h1>
+  <p>
+  {% for file in files %}
+    <a href="{{ url_for('file', file_id=file.id) }}" target="_blank">{{ file.title }}</a>
+      {% for tag in file.tags %}
+        <span>{{ tag }}</span>
+      {% endfor %}
+  {% endfor %}  
+  </p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+{% endblock %}
