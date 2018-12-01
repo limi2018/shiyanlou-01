@@ -34,6 +34,7 @@ def data_clean():
 
     df_merge_max_min = (df_merge - df_merge.min()) / (df_merge.max() - df_merge.min())
 
+    return df_merge_max_min, df_gt_resample_Q
 
 def climate_plot():
     df_merge_max_min = data_clean()[0]
